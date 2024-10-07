@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #f9ede8;
+    color: #d18f80;
+}
+
+header {
+    width: 100%;
+    background-color: #deb0a5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #d18f80; 
+    font-weight: normal; 
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi Zoom-in */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Kelas untuk animasi */
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease-in forwards;
+}
+
+/* Kelas untuk menyembunyikan elemen */
+.hidden {
+    display: none;
+}
+
+.profile-icon {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main {
+    padding-top: 80px;
+}
+
+/* Centered Heading */
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify; 
+}
+
+.about h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.about p, .about ol {
+    margin-bottom: 20px;
+    font-size: 18px; 
+}
+
+.about ol {
+    margin-left: 15px;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.btn {
+    background-color: #deb0a5;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    border: 0;
+}
+
+.btn:hover {
+    background-color: #d18f80;
+}
+
+/* Styling for Select Options and Buttons */
+.form-box {
+    text-align: center; /* Center all content */
+    margin-top: 20px;
+}
+
+.form-box button {
+    display: block; /* Each button on its own line */
+    width: 100%; /* Make buttons full width */
+    max-width: 300px; /* Max width for buttons */
+    margin: 10px auto; /* Space between buttons */
+    padding: 15px 30px;
+    background-color: #deb0a5;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #d18f80;
+}
+
+footer {
+    background-color: #deb0a5;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+.pdf-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+#pdf-canvas {
+    border: 1px solid #deb0a5;
+    max-width: 80%;
+}
+
+.pdf-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #deb0a5;
+    transition: color 0.3s;
+}
+
+.nav-button:hover {
+    color: #d18f80;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.reservation-cta {
+    text-align: center; 
+    margin-bottom: 50px;
+}
+
+.reservation-cta h3{
+    text-align: center; 
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.reservation-cta p{
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+.form-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 50px;
+}
+
+.form-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Card Product Styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-footer {
+    background-color: #fff;
+    border-top: none;
+}
+
+.card-footer .btn {
+    width: 100%;
+}
+
+/* Update pada form */
+#order-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#order-form .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#order-form .form-control {
+    border: 2px solid #deb0a5;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+#order-form .form-control:focus {
+    border-color: #d18f80;
+    box-shadow: 0 0 5px rgba(209, 143, 128, 0.3);
+}
+
+/* Style untuk notifikasi */
+#order-notification {
+    background-color: #d18f80;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cart Summary */
+.cart-summary .btn {
+    background-color: #deb0a5;
+}
+
+.cart-summary .btn:hover {
+    background-color: #d18f80;
+}
+
+.btn-primary, .btn-success, .btn-warning {
+    background-color: #deb0a5; 
+    border: none;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-warning:hover {
+    background-color: #d18f80; 
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 5px 10px; 
+    margin-bottom: 10px;
+    font-size: 12px;   
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+
+    .cart-summary {
+        margin-top: 40px;
+    }
+}
+
