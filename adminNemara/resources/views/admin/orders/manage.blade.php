@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <style>
         .sidebar {
-            margin-top: 150px;
             width: 250px; /* Fixed width for the sidebar */
             height: 650px;
             background-color: #d18f80; /* Sidebar background color */
             color: white; /* Text color */
             padding: 15px; /* Padding inside the sidebar */
-            position: flex; /* Keep the sidebar fixed */
-            margin-right: 1025px;
+            position: fixed; /* Fix the sidebar to the screen */
+            left: 0; /* Stick to the left side of the screen */
+            top: 0; /* Align to the top of the screen */
+            bottom: 0; /* Stretch the sidebar height to the bottom of the screen */
         }
+
         /* Reuse the style from the products table for the orders */
         .main-content {
             padding: 20px;

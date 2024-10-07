@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <style>
-        .dashboard-container {
-            display: flex;
+        .sidebar {
+            width: 250px; /* Fixed width for the sidebar */
+            height: 650px;
+            background-color: #d18f80; /* Sidebar background color */
+            color: white; /* Text color */
+            padding: 15px; /* Padding inside the sidebar */
+            position: fixed; /* Fix the sidebar to the screen */
+            left: 0; /* Stick to the left side of the screen */
+            top: 0; /* Align to the top of the screen */
+            bottom: 0; /* Stretch the sidebar height to the bottom of the screen */
         }
         .main-content {
             padding: 20px;
